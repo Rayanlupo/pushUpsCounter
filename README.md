@@ -1,19 +1,7 @@
 # Push up counter
 
-A new Flutter project created with FlutLab - https://flutlab.io
+This is my first project using flutter
 
 ## Getting Started
 
-A few resources to get you started if this is your first Flutter project:
-
-- https://flutter.dev/docs/get-started/codelab
-- https://flutter.dev/docs/cookbook
-
-For help getting started with Flutter, view our
-https://flutter.dev/docs, which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-## Getting Started: FlutLab - Flutter Online IDE
-
-- How to use FlutLab? Please, view our https://flutlab.io/docs
-- Join the discussion and conversation on https://flutlab.io/residents
+when you open the app the first thing you have to do is clicking start, then position the phone at the height that you prefer, you can use a book or other object to help you. the when doing push ups use your nose to touch the blue zone in your screen, when you release it it will count as on push up
