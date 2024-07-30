@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
   }
@@ -33,13 +35,12 @@ class HomeScreen extends StatelessWidget {
                 style: const TextStyle(fontSize: 50),
                 textAlign: TextAlign.start,
               ),
-              const SizedBox(height: 20), // Spazio tra il testo e il bottone
+              const SizedBox(height: 20),
               TextButton(
                 style: TextButton.styleFrom(
                   textStyle: const TextStyle(fontSize: 20),
                 ),
                 onPressed: () {
-                  // Assicurati che il `context` sia quello di `HomeScreen`
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => Counter()),
@@ -66,32 +67,42 @@ class Counter extends StatefulWidget {
 
 class _CounterState extends State<Counter> {
   int _upCounter = 0;
-
+  final player = AudioPlayer();
   void _incrementUp() {
     setState(() {
       _upCounter++;
     });
+    _playSound();
+  }
+
+  void _playSound() async {
+    // Load and play the audio file
+    await player.play(AssetSource('sound.mp3'));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Counter")),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Push-ups: $_upCounter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            ElevatedButton(
-              onPressed: _incrementUp,
-              child: const Text("Increment"),
-            ),
-          ],
-        ),
-      ),
-    );
+        appBar: AppBar(title: const Text("Counter")),
+        body: Center(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          GestureDetector(
+              onTap: _incrementUp,
+              child: Container(
+                width: 3000,
+                height: 500,
+                child: Container(
+                  color: Colors.blue,
+                  child: Center(
+                    child: Text(
+                      '$_upCounter',
+                      style: TextStyle(fontSize: 100, color: Colors.white),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ))
+        ])));
   }
 }
