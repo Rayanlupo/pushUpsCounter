@@ -141,9 +141,9 @@
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///home/codespace/.pub-cache/hosted/pub.dev/flutter_lints-2.0.3",
+      "rootUri": "file:///home/codespace/.pub-cache/hosted/pub.dev/flutter_lints-4.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.1"
     },
     {
       "name": "flutter_test",
@@ -201,9 +201,9 @@
     },
     {
       "name": "lints",
-      "rootUri": "file:///home/codespace/.pub-cache/hosted/pub.dev/lints-2.1.1",
+      "rootUri": "file:///home/codespace/.pub-cache/hosted/pub.dev/lints-4.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.1"
     },
     {
       "name": "matcher",
@@ -392,7 +392,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-07-30T09:00:33.220300Z",
+  "generated": "2024-07-30T14:37:43.059476Z",
   "generator": "pub",
   "generatorVersion": "3.4.4",
   "flutterRoot": "file:///workspaces/pushUpsCounter/flutter",
